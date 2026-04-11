@@ -1,0 +1,19 @@
+# --- Pasta de Build (O resultado final que o Jekyll gera) ---
+_site/
+_config.yml
+
+# --- Caches e Metadados do Jekyll ---
+.jekyll-cache/
+.jekyll-metadata
+
+# --- Dependências do Ruby (Gems) ---
+.bundle/
+vendor/
+Gemfile.lock
+
+# --- Arquivos de Sistema e Editores ---
+.DS_Store
+.vscode/
+.idea/
+*~
+*.swp

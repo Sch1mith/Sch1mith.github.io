@@ -1,0 +1,17 @@
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Nunito", sans-serif;
+	font-weight: 700;
+	font-size: 1.6rem;
+	margin: 1lvh 1lvw;
+}
+
+main {
+	a {
+		text-decoration: none;
+
+	}
+}
