@@ -4,13 +4,21 @@
 	initial-value: 0deg;
 }
 
+@property --percentage {
+	syntax: "<percentage>";
+	inherits: false;
+	initial-value: 0%;
+}
+
 @keyframes multicor {
 	from, to {
 		--matiz: 0deg;
+		--percentage: 0%;
 	}
 
 	50% {
-		--matiz: 80deg;
+		--matiz: 100deg;
+		--percentage: 30%;
 	}
 }
 
@@ -33,7 +41,7 @@ header {
 	margin: 1svh 2svw;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
-	grid-template-rows: 1fr 2fr 1fr;
+	grid-template-rows: 1fr 2fr;
 	@media (width <=800px) {
 		display: flex;
 		flex-direction: column;
@@ -86,18 +94,23 @@ header {
 		margin-right: 15svw;
 
 		.IA-total {
-			color: hsl(calc(80deg + var(--matiz)) 70% 30%);
+			font-weight: 800;
+			font-size: 1.65rem;
+			color: hsl(calc(50deg + var(--matiz)) calc(70% + var(--percentage)) 30%);
 			animation: multicor 2s infinite;
 		}
 
 		.IA-parcial {
-			color: hsl(calc(270deg + var(--matiz)) 70% 30%);
+			font-weight: 800;
+			font-size: 1.65rem;
+			color: hsl(calc(250deg + var(--matiz)) calc(70% + var(--percentage)) 30%);
 			animation: multicor 2s infinite;
 		}
 	}
 
 	.qrcode{
 		display :flex;
+		margin-right: -2rem;
 		flex-direction: column;
 		justify-content: flex end;
 		align-items: center;
@@ -111,6 +124,30 @@ header {
 
 		p {
 			text-align: center;
+		}
+	}
+
+}
+
+main{
+	.line{
+		font-family: "Noto Sans Symbols 2", sans-serif;
+		font-size: 1.9rem;
+		overflow: hidden;
+		height: 3rem;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+
+		&::before{
+			content: "⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓      ⚝      ⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓⎓";
+			letter-spacing: 0.1rem;
+			color: hsl(0 0 0);
+			text-shadow: 3px 2px 2px red,
+						0px 0px 3px blue,
+						-3px -2px cyan;
+			animation: multicor 2s infinite;
+			white-space: pre;
 		}
 	}
 }
