@@ -12,6 +12,13 @@ body {
 main {
 	a {
 		text-decoration: none;
-
+		color: #00557f;
+		&:visited{
+			text-decoration: none;
+			color: #00557f;
+		}
+		&:hover{
+			color: black;
+		}
 	}
 }
