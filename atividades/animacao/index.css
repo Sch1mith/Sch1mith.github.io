@@ -1,0 +1,71 @@
+@property --cor {
+	syntax: "<color>";
+	initial-value: hsl(285 70% 50%);
+	inherits: true;
+}
+
+@keyframes cor {
+	from, to
+	{
+		--cor: hsl(285 70% 50%);
+	}
+	50% {
+		--cor: hsl(217 70% 50%);
+	}
+}
+
+@keyframes girar {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes desenhar {
+	from, to {
+		clip-path: circle(0px);
+	}
+
+	50% {
+		clip-path: circle(200px);
+	}
+
+}
+
+.texto {
+	margin-top: 5svh;
+	border: solid 1px black;
+}
+
+img {
+	width: 300px;
+	height: 400px;
+	animation: desenhar 3s infinite, girar 3s infinite;
+}
+
+.pai {
+	width: 15%
+}
+
+.svg {
+	width:200px;
+	height: 200px;
+	margin-top: 5svh;
+	background-color: black;
+	clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%,
+					   100% 100%, 100% 0%);
+	transition: clip-path 1s;
+}
+
+.pai:hover > .svg{
+	clip-path: circle(25px);
+}
+
+.texto p {
+	display: inline-block;
+	color: var(--cor);
+	animation: cor 2.5s infinite;
+}

@@ -1,0 +1,44 @@
+.conteudo{
+	text-align: center;
+	font-family: "Nunito", sans-serif;
+	margin-left: 10%;
+}
+
+table {
+	table-layout: fixed;
+	width: 90%;
+	border: 1px solid black;
+	border-collapse: collapse;
+	margin-bottom: 15px;
+}
+
+table:first-child tr:first-child td {
+	background-color: black;
+	line-height: 0.1;
+	color: orange;
+	padding: 0px;
+}
+
+.primeira_linha {
+	padding: 0px;
+	background-color: grey;
+	font-weight: 700;
+	line-height: 0.0;
+	border-collapse: collapse;
+}
+
+.segunda_linha td{
+	padding: 0px;
+	color: white;
+	background-color: black;
+	font-weight: 900;
+	line-height: 0.5;
+}
+
+.aula_conjunta td{
+	padding: 0px;
+}
+
+td {
+	border: 1px solid black;
+}

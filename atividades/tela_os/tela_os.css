@@ -1,0 +1,36 @@
+html {
+	font-family: "Nunito", sans-serif;
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	background-color: burlywood;
+}
+
+summary {
+	list-style: none;
+}
+
+.notes__div {
+	font-size: 13px;
+}
+
+summary img {
+	height: 40px; width: 40px;
+}
+
+
+.details__summary-notes{
+	width: 300px; height: 200px;
+	background: #FFF;
+	border: 2px outset #888;
+	position: absolute;
+	left: 80px; top: 100px;
+}
+
+.details__summary-notes p:first-child{
+	background: #00F; color: #FFF;
+	margin-top: -2px;
+	margin-bottom: -3px;
+}

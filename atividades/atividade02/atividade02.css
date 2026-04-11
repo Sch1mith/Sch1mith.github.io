@@ -1,0 +1,66 @@
+body {
+	font-family: "Lato", sans-serif;
+	padding: 0% 3%;
+	margin-right: 5%;
+}
+
+header {
+	margin-left: 3%;
+	margin-top: 5%;
+}
+
+h2 {
+	color: #005c6d;
+	font-size: 36px;
+	font-weight: 400;
+	margin-left: 10px;
+}
+
+.linha {
+	display: block;
+	width: 100%;
+	background: url("https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/1/2022/09/divisor.svg") left no-repeat;
+	height: 15px;
+	margin-top: -20px;
+}
+
+.imagens {
+	display: flex; !important
+	justify-content: center;
+	margin-left: 15%;
+	gap: 12%;
+}
+
+img {
+	width: 100px;
+	height: 100px;
+}
+
+figure {
+	text-align: center;
+}
+
+.conteudo {
+	padding: 15px;
+	margin-left: 15px;
+}
+
+.negrito {
+	font-weight: 700;
+}
+
+.intro {
+
+	font-size: 20px;
+}
+
+.pdf {
+	margin-left: 20%;
+}
+
+.texto {
+	text-align: justify;
+	margin-left: 20px;
+	margin-right:20px;
+}
+
