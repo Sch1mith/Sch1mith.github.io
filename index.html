@@ -28,7 +28,7 @@
 				<br>
 				<br>
 				<br>
-				Site feito à mão, sem uso de inteligência artificial generativas e frameworks front-end.<br>
+				Site feito sem uso de inteligência artificial generativas e frameworks front-end.<br>
 				As tags <span class="IA-total"> Feito com I.A. ✦ </span> e <span class="IA-parcial"> Feito parcialmente com I.A. ✧ </span>
 				serão usadas quando necessário.
 				</p>
@@ -41,21 +41,24 @@
 
 		<main>
 			<div class="line"></div>
-			<div class="main__themes">
+			<div class="themes">
 				<h2>Temas!</h2>
-				<button id="theme__button-minimalist" type="button">Minimalist</button>
-				<button id="theme__button-pro" type="button">Proffisional</button>
-				<button id="theme__button-old_web" type="button">Old Web</button>
-				<button id="theme__button-info_hell" type="button">Info Hell</button>
-				<button id="theme__button-glitch" type="button">Glitch!</button>
-				<div class="">
-					<p id="theme__p-minimalist" class="main__button-description">teste</p>
-					<p id="theme__p-pro" class="main__button-description">teste</p>
-					<p id="theme__p-old_web" class="main__button-description">teste</p>
-					<p id="theme__p-info_hell" class="main__button-description">teste</p>
-					<p id="theme__p-glitch" class="main__button-description">teste</p>
+				<radio-picker arial-label="Butões radiais" role="radiogruop">
+					<label><input type="radio" id="theme_mini" name="tema" checked>Minimalista</label>
+					<label><input type="radio" id="theme_blog" name="tema" >Blog 2000</label>
+					<label><input type="radio" id="theme_old" name="tema" >Old Web</label>
+					<label><input type="radio" id="theme_info" name="tema" >Info Hell</label>
+					<label><input type="radio" id="theme_glitch" name="tema" >Glitch!</label>
+				</radio-picker>
+				<div class="p">
+					<p id="p_mini">não existe tema mais minimalista que esse, né?</p>
+					<p id="p_blog">carry on my wayward son...</p>
+					<p id="p_old">os anos 90 eram bem mais simples</p>
+					<p id="p_info">você quer cookies (não é uma pergunta)</p>
+					<p id="p_glitch">G<span class="l">l</span><span class="i">i</span><span class="t">t</span><span class="c">c</span><span class="h">h</span>!</p>
 				</div>
 			</div>
+			<p>teste</p>
 		</main>
 	</body>
 </html>
