@@ -1,5 +1,15 @@
+:root {
+	color-scheme: light dark;
+	--text: light-dark(#000, #FFF);
+	--bg: light-dark(#FFF, #151B28);
+	--hover: light-dark(hsl(200 100% 25%), hsl(200 100% 67%));
+	--border: light-dark(black, grey);
+	--shadow: light-dark(hsl(0 0 80%), hsl(0 0 15%));
+}
+
 html {
 	font-size: 62.5%;
+	background-color: var(--bg);
 }
 
 body {
@@ -9,54 +19,76 @@ body {
 	margin: 1lvh 1lvw;
 }
 
+h1, h2, h3, h4, h5, h6, a {
+	font-family: "SN Pro", sans-serif;
+	color: light-dark(var(--text));
+}
+
 header {
-	margin-top: 20px;
 	margin: 1svh 2svw;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr;
+	grid-template-columns: 2fr 1fr;
 	@media (width <=800px) {
 		display: flex;
 		flex-direction: column;
 	}
-	.logo {
-		font-family: "SN Pro", sans-serif;
-		font-size: 1rem;
-		display: flex;
-		text-align: left;
-		align-items: center;
-
-		a {
-			text-decoration: none;
-			color: black;
-			&:visited{
-				text-decoration: none;
-				color: black;
-			}
-			&:hover{
-				color: #00557f;
-			}
-		}
+	.sensor_scroll{
+		position: absolute;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+		visibility: hidden;
+		height: 1px;
 	}
-	.nav {
-		font-family: "SN Pro", sans-serif;
+	.sticky_header{
+		grid-column: 1 / -1;
+		position: sticky;
+		top: 0;
+		z-index: 1;
+		background: var(--bg);
 		display: flex;
-		flex-direction: row;
-		gap: 1.5rem;
-		justify-content: flex-end;
-		align-items: center;
-		margin-right: 3svw;
-
-		a {
-			text-decoration: none;
-			color: black;
+		justify-content: space-between;
+		.logo {
+			font-size: 1rem;
+			display: flex;
 			text-align: center;
-			&:visited{	text-decoration: none;
-				color: black;}
-				&:hover{color: #00557f;}
-		}
-		@media (width <=800px) {
+			align-items: center;
 
-		};
+			a {
+				text-decoration: none;
+				color: var(--text);
+				&:visited{
+					text-decoration: none;
+					color: var(--text);
+				}
+				&:hover{
+					color: var(--hover);
+				}
+			}
+		}
+		.nav {
+			display: flex;
+			gap: 1.5rem;
+			justify-content: flex-end;
+			margin-right: 3svw;
+			align-items: center;
+
+			a {
+				text-decoration: none;
+				color: var(--text);
+				text-align: center;
+				&:visited{	text-decoration: none;
+					color: var(--text);
+				}
+				&:hover{color: var(--hover);
+				}
+			}
+			@media (width <=800px) {
+
+			};
+		}
 	}
+	&:has(#sensor_scroll:not(:visible)) .sticky_header { height: 6rem; background: blue;}
+
+
 }
