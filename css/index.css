@@ -64,6 +64,7 @@ body {
 		.logo {
 			font-size: 1rem;
 			display: flex;
+			margin-left: 2svw;
 			text-align: center;
 			align-items: center;
 			@media (width <= 480px) {
@@ -86,7 +87,6 @@ body {
 		.nav_header {
 			justify-content: flex-end;
 			margin-right: 3svw;
-
 			.menu-checkbox {
 				display: none;
 			}
@@ -108,6 +108,7 @@ body {
 				}
 			}
 			@media (width <=480px) {
+				margin-right: 0;
 				.menu-checkbox {
 					display: block;
 					&:checked ~ .links {
@@ -151,8 +152,6 @@ header {
 		flex-direction: column;
 	}
 	.text{
-		display: flex;
-		align-content: flex-end;
 		text-align: left;
 		margin-right: 15svw;
 
