@@ -284,8 +284,9 @@ main{
 				pointer-events: none;
 			}
 
-			@media (width < 480px) {
+			@media (width < 800px) {
 				flex-wrap: wrap;
+				gap: 1rem;
 				margin-bottom: 3svh;
 				justify-content: center;
 			}

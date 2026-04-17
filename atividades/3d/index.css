@@ -22,7 +22,6 @@
 	transform: rotateY(180deg); /* Essencial para o verso estar 'atrás' */
 }
 
-/* Adicione isso ao seu index.css */
 
 .card-container {
 	perspective: 1000px; /* Cria a profundidade */
