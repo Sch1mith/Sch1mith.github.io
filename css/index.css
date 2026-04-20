@@ -31,6 +31,12 @@
 	--shadow: light-dark(hsl(0 0 80%), hsl(0 0 15%));
 }
 
+/* Utilitários */
+
+.flex {
+	display: flex;
+}
+
 html {
 	font-size: 62.5%;
 	background-color: var(--bg);
@@ -42,7 +48,7 @@ body {
 	font-size: 1.6rem;
 	margin: 1lvh 1lvw;
 	@media (width <=480px) {
-		padding: 1.2rem;
+		padding: 1rem;
 	}
 
 	.sensor_scroll{
@@ -54,22 +60,18 @@ body {
 		height: 1px;
 	}
 	.sticky_header{
-		grid-column: 1 / -1;
 		position: sticky;
 		top: 0;
 		z-index: 1;
 		background: var(--bg);
-		display: flex;
 		justify-content: space-between;
 		.logo {
 			font-size: 1rem;
-			display: flex;
 			margin-left: 2svw;
 			text-align: center;
 			align-items: center;
 			@media (width <= 480px) {
 				display: block;
-				width: 100%;
 				padding-left: 1rem;
 			}
 			a {
@@ -85,15 +87,14 @@ body {
 			}
 		}
 		.nav_header {
-			justify-content: flex-end;
-			margin-right: 6svw;
+			margin-right: 2svw;
 			margin-top: 1svh;
+			align-content: center;
 			.menu-checkbox {
 				display: none;
 			}
 
 			.links{
-				display: flex;
 				gap: 1.5rem;
 				align-items: center;
 			}
@@ -115,6 +116,7 @@ body {
 				margin-right: 0;
 				.menu-checkbox {
 					display: block;
+
 					&:checked ~ .links {
 						display: flex;
 					}
@@ -148,24 +150,23 @@ h1, h2, h3, h4, h5, h6, a{
 }
 
 header {
-	margin: 1svh 2svw;
-	display: grid;
-	grid-template-columns: 2fr 1fr;
+	justify-content: space-between;
 	@media (width <=800px) {
-		display: flex;
 		flex-direction: column;
 	}
 	@media (width < 480px) {
 		margin: 0;
 	}
 	.text{
-		text-align: left;
-		margin-right: 15svw;
-
+		margin-left: 2svw;
+		text-align: justify;
+		align-content: center;
+		max-width: 50%;
 		@media (width <=800px) {
 			justify-content: center;
 			text-align: justify;
 			margin: 1rem;
+			max-width: 100%;
 
 		}
 		@media (width <480px) {
@@ -188,11 +189,9 @@ header {
 	}
 
 	.qrcode{
-		display: flex;
-		margin-right: -2rem;
 		flex-direction: column;
-		justify-content: flex end;
 		align-items: center;
+		margin-right: 1.3svw;
 		@media (width <= 480px) {
 			display: none;
 		}
@@ -234,12 +233,11 @@ main{
 	}
 
 	.themes{
-		display: flex;
+		display: none; /*Altere aqui para flex para a aba temas reaparecer*/
 		flex-direction: column;
 		align-items: center;
 
 		radio-picker {
-			display: flex;
 			gap: 2rem;
 			height: 10rem;
 			align-items: center;
