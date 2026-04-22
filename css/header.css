@@ -18,7 +18,7 @@ header{
 				color: light-dark(#000, #FFF);
 			}
 			&:hover{
-				color: light-dark(#000, #FFF);
+				color: light-dark(hsl(200 100% 25%), hsl(200 100% 67%));
 			}
 		}
 	}
@@ -35,7 +35,8 @@ header{
 			&:visited{	text-decoration: none;
 				color: light-dark(#000, #FFF);
 			}
-			&:hover{color: light-dark(#000, #FFF);
+			&:hover{
+				color: light-dark(hsl(200 100% 25%), hsl(200 100% 67%));
 			}
 		}
 		@media (width <=800px) {

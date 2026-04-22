@@ -3,15 +3,16 @@
 	--text: light-dark(#000, #FFF);
 	--text-destaque: light-dark(hsl(130 40% 29%), hsl(130 40% 29%));
 	--cor-linha: light-dark(hsl(120 50% 0% / 0.05), hsl(120 100% 50% / 0.05));
-	/*--bg-textura: repeating-linear-gradient(
-		transparent,
-		transparent 2px,
-		var(--cor-linha) 2px,
-		var(--cor-linha) 4px
-	);*/
-	--bg-textura: linear-gradient(var(--cor-linha) 2px, transparent 1px),
-	linear-gradient(90deg, var(--cor-linha) 2px, transparent 1px);
+	--text-crt: repeating-linear-gradient(
+		hsl(120 100% 50%),
+		hsl(120 100% 50%) 2px,
+		hsl(120 100% 50% / 0.2) 2px,
+		hsl(120 100% 50% / 0.2) 4px
+	);
+	--bg-textura: linear-gradient(var(--cor-linha), transparent 1px),
+				linear-gradient(90deg, var(--cor-linha), transparent 1px);
 	--bg-color: light-dark(hsl(0 0% 100%), hsl(0 0 5%));
+	--bg-color-banner: light-dark(hsl(0 0% 100%), hsl(140 47% 2%));
 	--hover: light-dark(hsl(200 100% 25%), hsl(200 100% 67%));
 	--border: light-dark(black, grey);
 	--shadow: light-dark(hsl(0 0 80%), hsl(0 0 15%));
@@ -26,6 +27,23 @@
 	}
 }
 
+.block-text {
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+	text-shadow: -1.5px -1.5px 1px grey,
+	0.7px 0.7px blue;
+	letter-spacing: 0.15rem;
+}
+
+.segment-text {
+	background: var(--text-crt);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	-webkit-text-fill-color: transparent;
+}
+
+
 html {
 	font-size: 62.5%;
 }
@@ -39,6 +57,7 @@ body {
 	font-family: "DotGothic16", sans-serif;
 	font-size: 1.6rem;
 	position: relative;
+	margin: 1lvh 1lvw;
 	background-color: var(--bg-color);
 
 	&::before {
@@ -50,7 +69,7 @@ body {
 		height: 100%;
 
 		background-image: var(--bg-textura);
-		background-size: 25px 25px;
+		background-size: 30px 30px;
 		filter: grayscale(80%);
 		z-index: -1;
 	}
@@ -60,7 +79,20 @@ body {
 		align-items: center;
 		margin-top: 2rem;
 		h1 {
+			font-size: 4rem;
 			margin-bottom: -0.1rem;
+			text-shadow: 0.7px 0.7px 3px blue,
+						-0.7px -0.7px lightgreen;
+		}
+		p {
+			font-size: 1.7rem;
+			letter-spacing: 0.2rem;
+		}
+	}
+
+	main {
+		.banner {
+
 		}
 	}
 }
