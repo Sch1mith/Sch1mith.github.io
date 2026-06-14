@@ -2,7 +2,7 @@
 	color-scheme: light dark;
 	--text: light-dark(#000, #FFF);
 	--text-destaque: light-dark(hsl(130 40% 29%), hsl(130 40% 29%));
-	--cor-linha: light-dark(hsl(120 50% 0% / 0.05), hsl(120 100% 50% / 0.05));
+	--cor-linha: light-dark(hsl(120 50% 0% / 0.1), hsl(120 100% 50% / 0.1));
 	--text-crt: repeating-linear-gradient(
 		hsl(120 100% 50%),
 		hsl(120 100% 50%) 2px,

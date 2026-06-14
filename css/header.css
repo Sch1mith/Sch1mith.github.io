@@ -1,46 +1,74 @@
-
-header{
-	display: flex;
+header {
+	background: var(--bg);
+    flex-direction: row;
 	justify-content: space-between;
-	margin: 1svh 1svw;
+    margin-top: 3svh;
 	.logo {
-		font-size: 1rem;
-		color: light-dark(#000, #FFF);
-		display: flex;
+		margin-left: 2svw;
 		text-align: center;
 		align-items: center;
-
+		@media (width <= 480px) {
+			display: block;
+			padding-left: 1rem;
+		}
 		a {
 			text-decoration: none;
-			color: light-dark(#000, #FFF);
+			color: var(--text);
 			&:visited{
 				text-decoration: none;
-				color: light-dark(#000, #FFF);
+				color: var(--text);
 			}
 			&:hover{
-				color: light-dark(hsl(200 100% 25%), hsl(200 100% 67%));
+				color: var(--hover);
 			}
 		}
 	}
-	.nav {
-		color: light-dark(#000, #FFF);
-		display: flex;
-		gap: 1.5rem;
+	.nav_header {
+        justify--content: flex-end;
 		margin-right: 2svw;
-		align-items: center;
+        margin-top: 1svh;
+		align-content: center;
+		.links{
+			gap: 1.5rem;
+			align-items: center;
+		}
 
 		a {
-			text-decoration: none;
+            text-decoration: none;
+			color: var(--text);
 			text-align: center;
-			&:visited{	text-decoration: none;
-				color: light-dark(#000, #FFF);
-			}
-			&:hover{
-				color: light-dark(hsl(200 100% 25%), hsl(200 100% 67%));
-			}
+			&:visited {color: var(--text); }
+			&:hover {color: var(--hover); }
 		}
-		@media (width <=800px) {
+		@media (width <= 800px) {
+			margin-right: 2svw;
+		}
+		@media (width <= 480px) {
+			margin-right: 0;
+			.menu-checkbox {
+				display: block;
 
-		};
+				&:checked ~ .links {
+					display: flex;
+				}
+			}
+
+			.links{
+				display: none;
+				flex-direction: column;
+				position: fixed;
+				top: 6rem;
+				right: 0;
+				width: 70%;
+				background: var(--bg);
+				z-index: 2;
+				box-shadow: 0 0 20rem black;
+
+				a {
+					margin: 0;
+				}
+			}
+
+		}
 	}
 }
