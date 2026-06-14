@@ -43,13 +43,6 @@ html {
 }
 
 body {
-	font-family: "Nunito", sans-serif;
-	font-weight: 700;
-	font-size: 1.6rem;
-	margin: 1lvh 1lvw;
-	@media (width <=480px) {
-		padding: 1rem;
-	}
 
 	.sensor_scroll{
 		position: absolute;
@@ -64,105 +57,24 @@ body {
 		top: 0;
 		z-index: 1;
 		background: var(--bg);
-		justify-content: space-between;
-		.logo {
-			font-size: 1rem;
-			margin-left: 2svw;
-			text-align: center;
-			align-items: center;
-			@media (width <= 480px) {
-				display: block;
-				padding-left: 1rem;
-			}
-			a {
-				text-decoration: none;
-				color: var(--text);
-				&:visited{
-					text-decoration: none;
-					color: var(--text);
-				}
-				&:hover{
-					color: var(--hover);
-				}
-			}
-		}
-		.nav_header {
-			margin-right: 2svw;
-			margin-top: 1svh;
-			align-content: center;
-			.menu-checkbox {
-				display: none;
-			}
-
-			.links{
-				gap: 1.5rem;
-				align-items: center;
-			}
-
-			a {
-				text-decoration: none;
-				color: var(--text);
-				text-align: center;
-				&:visited{	text-decoration: none;
-					color: var(--text);
-				}
-				&:hover{color: var(--hover);
-				}
-			}
-			@media (width <= 800px) {
-				margin-right: 2svw;
-			}
-			@media (width <= 480px) {
-				margin-right: 0;
-				.menu-checkbox {
-					display: block;
-
-					&:checked ~ .links {
-						display: flex;
-					}
-				}
-
-				.links{
-					display: none;
-					flex-direction: column;
-					position: fixed;
-					top: 6rem;
-					right: 0;
-					width: 70%;
-					background: var(--bg);
-					z-index: 2;
-					box-shadow: 0 0 20rem black;
-
-					a {
-						margin: 0;
-					}
-				}
-
-			}
-		}
 	}
-	&:has(#sensor_scroll:not(:visible)) .sticky_header { height: 6rem; background: blue;}
-
 }
+&:has(#sensor_scroll:not(:visible)) .sticky_header { height: 6rem; background: blue;}
 
-h1, h2, h3, h4, h5, h6, a{
-	font-family: "SN Pro", sans-serif;
-}
-
-header {
-	justify-content: space-between;
-	@media (width <=800px) {
-		flex-direction: column;
-	}
-	@media (width < 480px) {
-		margin: 0;
-	}
-	.text{
-		margin-left: 2svw;
-		text-align: justify;
-		align-content: center;
-		max-width: 50%;
-		@media (width <=800px) {
+ .header-text {
+	 justify-content: space-between;
+	 @media (width <=800px) {
+		 flex-direction: column;
+	 }
+	 @media (width < 480px) {
+		 margin: 0;
+	 }
+	 .text{
+		 margin-left: 2svw;
+		 text-align: justify;
+		 align-content: center;
+		 max-width: 50%;
+		 @media (width <=800px) {
 			justify-content: center;
 			text-align: justify;
 			margin: 1rem;

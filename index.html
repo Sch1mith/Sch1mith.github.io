@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="pt-BR">
 	<head>
@@ -9,46 +11,30 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&text=🭹◈✦✧&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/index.css"/>
+        <link rel="stylesheet" href="css/utilities.css">
+        <link rel="stylesheet" href="css/header.css">
 	</head>
 
 	<body>
-		<div class="sensor_scroll"></div>
-			<div class="flex sticky_header">
-				<div class="flex logo">
-					<a href="./index.html"><h1>gs.sandbox.nom.br<br>
-					(site por Guilherme Schimith)</h1></a>
-				</div>
-				<nav class="nav_header">
-					<input type="checkbox" id="menu-checkbox" class="menu-checkbox">
-
-					<label for="menu-checkbox" class="menu-btn">
-						<span></span>
-					</label>
-
-					<div class="flex links">
-						<a href=""><p>Blog</p></a>
-						<a href="sandbox.html"><p>SandBox</p></a>
-						<a href="projetos.html"><p>Projetos</p></a>
-						<a href=""><p>Quem Sou?</p></a>
-					</div>
-				</nav>
-			</div>
-		<header class="flex">
+		<div class="flex sticky_header">
+            {% include header.html %}
+		</div>
+		<div class="header-text flex">
 			<div class="text">
 				<p>### Um site portfólio/blog/sandbox para estúdos, aqui vou explorar algumas tecnologias que me interessem, testar idéias, divulgar meus projetos e escrever artigos sobre assuntos que estou aprendendo.
-				<br>
-				<br>
-				<br>
-				Site feito sem uso de inteligência artificial generativas e frameworks front-end.<br>
-				As tags <span class="IA-total"> Feito com I.A. ✦ </span> e <span class="IA-parcial"> Feito parcialmente com I.A. ✧ </span>
-				serão usadas quando necessário.
+				    <br>
+				    <br>
+				    <br>
+				    Site feito sem uso de inteligência artificial generativas e frameworks front-end.<br>
+				    As tags <span class="IA-total"> Feito com I.A. ✦ </span> e <span class="IA-parcial"> Feito parcialmente com I.A. ✧ </span>
+				    serão usadas quando necessário.
 				</p>
 			</div>
 			<div class="flex qrcode">
 				<img alt="qr code" src="./src/qr_code.svg">
 				<p>Teste no seu celular!<br>(alguns recursos podem estar indisponíveis)</p>
 			</div>
-		</header>
+		</div>
 
 		<main>
 			<span class="line"></span>

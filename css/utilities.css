@@ -1,0 +1,61 @@
+:root {
+	color-scheme: light dark;
+	--text: light-dark(#000, #FFF);
+	--bg: light-dark(#FFF, #151B28);
+	--hover: light-dark(hsl(200 100% 25%), hsl(200 100% 67%));
+	--border: light-dark(black, grey);
+	--shadow: light-dark(hsl(0 0 80%), hsl(0 0 15%));
+}
+
+/* Utilitários */
+
+.flex {
+	display: flex;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.f14 {font-size: 1.4rem;}
+.f16 {font-size: 1.6rem;}
+.f18 {font-size: 1.8rem;}
+.f20 {font-size: 2rem;}
+.f22 {font-size: 2.2rem;}
+.f24 {font-size: 2.4rem;}
+.f26 {font-size: 2.6rem:}
+.f28 {font-size: 2.8rem;}
+.f30 {font-size: 3rem;}
+.f32 {font-size: 3.2rem;}
+.f34 {font-size: 3.4rem;}
+.f36 {font-size: 3.6rem;}
+.f38 {font-size: 3.8rem;}
+
+.w100 {font-weight: 100;}
+.w200 {font-weight: 200;}
+.w300 {font-weight: 300;}
+.w400 {font-weight: 400;}
+.w500 {font-weight: 500;}
+.w600 {font-weight: 600;}
+.w700 {font-weight: 700;}
+.w800 {font-weight: 800;}
+.w900 {font-weight: 900;}
+
+.sn-pro {
+    font-family: "SN Pro", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    background: var(--bg);
+    body {
+        font-size: 1.6rem;
+        font-family: "Nunito", sans-serif;
+	    font-weight: 700;
+	    margin: 1lvh 1lvw;
+	    @media (width <= 480px) {
+		    padding: 1rem;
+	    }
+    }
+}
