@@ -1,7 +1,6 @@
 header {
 	background: var(--bg);
-    flex-direction: row;
-	justify-content: space-between;
+    justify-content: space-between;
     margin-top: 3svh;
 	.logo {
 		margin-left: 2svw;
@@ -24,7 +23,6 @@ header {
 		}
 	}
 	.nav_header {
-        justify--content: flex-end;
 		margin-right: 2svw;
         margin-top: 1svh;
 		align-content: center;
