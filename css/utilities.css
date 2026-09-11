@@ -25,13 +25,20 @@
 :root {
 	color-scheme: light dark;
 	--text: light-dark(#000, #FFF);
-	--bg: light-dark(#FFF, #151B28);
+	--bg: light-dark(hsl(221 50% 90%), hsl(221 31.5% 12%));
+    --bg-darker: light-dark(hsl(0 0% 95%), hsl(221 31% 10%));
 	--hover: light-dark(hsl(200 100% 25%), hsl(200 100% 67%));
 	--border: light-dark(black, grey);
 	--shadow: light-dark(hsl(0 0 80%), hsl(0 0 15%));
+    --panda: url(../src/sleepy-panda.cur);
+    --pointer: url(../src/pointer.cur);
 }
 
 /* Utilitários */
+
+a {
+    &:hover { cursor: var(--pointer), pointer; }
+}
 
 .flex {
 	display: flex;
@@ -70,6 +77,10 @@
     font-family: "SN Pro", sans-serif;
 }
 
+.hr {
+    width: 50%;
+}
+
 .desktop {
   	display: none;
 	color: var(--text);
@@ -89,7 +100,15 @@
 	color: light-dark(hsl(250 70% 30%), hsl(30 70% 50%));
 }
 
+.simple-line {
+    margin-top: 1lvw;
+    display: block;
+    height: 1px;
+    border-bottom: 1px inset white;
+}
+
 html {
+    cursor: var(--panda), default;
     font-size: 62.5%;
     background: var(--bg);
     body {

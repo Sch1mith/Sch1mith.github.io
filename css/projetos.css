@@ -1,15 +1,22 @@
 main {
-	a {
-		text-decoration: none;
-		color: var(--text);
-		&:visited{
-			text-decoration: none;
-			color: var(--text);
-		}
-		&:hover{
-			color: var(--hover);;
-		}
-	}
+    margin-top: 2rem;
+    .principal {
+
+        .links {
+            gap: 0.8rem;
+            a {
+		        text-decoration: none;
+		        color: var(--text);
+		        &:visited{
+			        text-decoration: none;
+			        color: var(--text);
+		        }
+		        &:hover{
+			        color: var(--hover);;
+		        }
+	        }
+        }
+    }
 
 	@media (width <=800px) {
 		.desktop {

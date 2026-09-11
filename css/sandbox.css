@@ -48,9 +48,14 @@ html {
 	font-size: 62.5%;
 }
 
-.h-text {
+.h1-presentation {
 	font-family: "Jersey 15", sans-serif;
 	color: var(--text-destaque);
+}
+
+.h3-presentation {
+    font-family: ;
+    color: ;
 }
 
 body {
