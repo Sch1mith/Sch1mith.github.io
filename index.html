@@ -7,9 +7,11 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, interactive-widget=resize-content,
 										initial scale=1.0'">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&text=🭹◈✦✧&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="./src/favicon.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=SN+Pro:ital,wght@0,200..900;1,200..900&family=VT323&display=swap" rel="stylesheet">
+        <link rel="icon" href="./src/favicon.gif" type="image/gif">
 		<link rel="stylesheet" href="css/index.css"/>
         <link rel="stylesheet" href="css/utilities.css">
         <link rel="stylesheet" href="css/header.css">
@@ -28,9 +30,13 @@
 				    serão usadas quando necessário.
 				</p>
 			</div>
-			<div class="flex qrcode">
-				<img alt="qr code" src="./src/qr_code.svg">
-				<p>Teste no seu celular!<br>(alguns recursos podem estar indisponíveis)</p>
+			<div class="column qrcode">
+                <div alt="área em construção" class="placeholder">
+                    <p class="vt323 f24 terminal_text" role="img" aria-label="texto terminal">user@linux:~$ Em Breve ▊</p>
+                </div>
+                <p>Área em construção!<br>espaço reservado</p>
+				<!-- <img alt="qr code" src="./src/qr_code.svg">
+				     <p>Teste no seu celular!<br>(alguns recursos podem estar indisponíveis)</p> -->
 			</div>
 		</div>
 
@@ -53,16 +59,43 @@
 					<p id="p_glitch">G̣̣̣̣<span class="l">l</span><span class="i">i</span><span class="t">ŧ</span><span class="c">c</span><span class="h">ħ</span>!</p>
 				</div>
 			</div>
+
             <hr class="hr">
 
-            <div class="column projetos">
+            <noscript>
+                <span class="column f28 no_script">Javascript desabilitado no navegador, alguns elementos não irão funcionar corretamente</span>
+            </noscript>
+            <div class="projetos">
                 <h1>Projetos</h1>
-                <div class=""></div>
-                <div class=""></div>
-                <div class=""></div>
-                <div class=""></div>
+                <div class="flex github_cards">
+                    <a class="link_card"  href="https://github.com/Sch1mith/cherry-note" target="_blank">
+                        <h1 style="background-color: lightpink; border: dashed 1px red; color: black">Cherry Note</h1>
+                        <p>Cherry Note é uma aplicação web de anotações com linguagem Markdown feita para ser rápida e prática</p>
+                    </a>
+                    <a class="link_card" href="https://github.com/Sch1mith/zsh-tradutor" target="_blank">
+                        <h1>Tradutor<br> Z-Shell</h1>
+                        <p>Um plug in simples para z-shell que utiliza o Google Tradutor (Inglês > Portugês e Português > Inglês) diretamente no terminal.</p>
+                    </a>
+                    <a class="link_card" href="https://github.com/Sch1mith/zsh-tradutor" target="_blank">
+                        <h1>Shell</h1>
+                        <p></p>
+                    </a>
+                    <a class="link_card"  href="https://github.com/Sch1mith/cherry-note" target="_blank">
+                        <h1 style="background-color: lightpink; border: dashed 1px red; color: black">Cherry Note</h1>
+                        <p>Cherry Note é uma aplicação web de anotações com linguagem Markdown feita para ser rápida e prática</p>
+                    </a>
+                </div>
+                <h2>Veja <a class="perfil_github" href="https://github.com/Sch1mith" target="_blank">mais aqui! (perfil Github)</a></h2>
             </div>
-
+            <div class="Sobre_mim">
+                <h2>Sobre mim</h2>
+                <p></p>
+                <div class="contato">
+                    <h2>Contato</h2>
+                    <link-list class="flex"></link-list>
+                </div>
+            </div>
 		</main>
+        <script src="./js/sparkle.js"></script>
 	</body>
 </html>

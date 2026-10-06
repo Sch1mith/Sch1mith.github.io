@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Chamos';
+    src: url('../src/fonts/CHAMOS.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 body {
     .header-text {
         margin-top: 5svh;
@@ -7,7 +16,8 @@ body {
 	    }
 	    @media (width < 480px) {
 		    margin: 0;
-	    }
+        }
+
 	    .text{
 		    margin-left: 2svw;
 		    text-align: justify;
@@ -33,13 +43,51 @@ body {
 			    display: none;
 		    }
 
+            .placeholder {
+                width: 512px;
+                height: 150px;
+                border: 2px solid darkgrey;
+                border-radius: 7px;
+                box-shadow: inset 0px 0px 40px 15px #000, inset 8px 0 10px 0px #000,
+                            inset -8px 0 10px 0 #000, inset 0 2px 3px 0 #000, inset 0 -2px 3px 0 #000;
+                background-color: hsl(110 74.1% 61.3%);
+                justify-content: flex-start;
+                display: flex;
+                .terminal_text {
+                    color: black;
+                    margin-left: 15px;
+                    z-index: 2;
+                    &:first-letter {
+                        display: inline-block;
+                        font-size: 2.2rem;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+
+            .placeholder::before {
+                content: '';
+                position: absolute;
+                width: 500px;
+                margin-left: 6px;
+                margin-bottom: 5px;
+                border: 1px solid rgb(0, 0, 0, 0.2);
+                box-shadow: 0px 5px 3px 0 rgb(0, 0, 0, 0.5);
+                transform: translateY(-110px);
+                transition: transform 0.3s linear;
+                align-self: flex-end;
+                height: 1px;
+                animation: crt 5s linear infinite;
+                z-index: 1;
+            }
+
 		    img {
 			    -webkit-user-select: none;
 			    user-select: none;
-			    width: 15rem;
-			    height: 15rem;
-			    border: 5px solid var(--border);
-			    border-radius: 12px;
+			    width: 150px;
+			    height: 150px;
+			    border: 2px solid rgb(0, 0, 0, 0.5);
+			    border-radius: 7px;
 		    }
 
 		    p {
@@ -92,11 +140,10 @@ body {
 
 				    box-shadow: inset 0px 0px 1.2px 0px #000;
 				    padding: 1.5rem;
-
-				    background: var(--bg-darker);
                     border-radius: 10px;
-				    &:hover{ background: #0004; cursor: var(--pointer), pointer; }
-				    &:active{ background: #0007; }
+				    background: var(--bg-darker);
+				    &:hover{ background: var(--button); color: white; cursor: pointer;text-shadow: 0 0 1px black;}
+				    &:active{ background: #0009; }
 			    }
 
 			    &:has(#theme_mini:checked) + .p #p_mini,
@@ -150,17 +197,74 @@ body {
 					   letter-spacing: 0.5rem;}
 				    .c {display: inline-block; transform: skewX(15deg);
 					    transform: skewY(20deg);}
-				    &:last-letter{
-					    text-shadow: red 1px 1px 3px;
-				    }
 			    }
 		    }
         }
-        .projetos {
-            align-items: center;
-            align-content: center;
-            justify-content: flex-start;
 
+        .no_script {
+            align-items: center;
+            margin-bottom: 10px;
+            background: #000;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .projetos {
+            font-family: 'Chamos', sans-serif;
+            position: relative;
+            background-image: url(../src/bg-projeto.jpg);
+            overflow: hidden;
+            box-shadow: inset 0 0 15px 3px #000;
+            margin-left: 35px;
+            margin-right: 35px;
+            border: solid 1px var(--bg-darker);
+            & > * {
+                position: relative;
+            }
+            & > :not(.cursor-trail) {
+                z-index: 10;
+            }
+
+            & > h1 {
+                cursor: default;
+                font-size: 3.5em;
+                color: black;
+                backdrop-filter: blur(15px);
+                text-align: center;
+                padding: 1rem;
+            }
+
+            .github_cards {
+                justify-content: space-evenly;
+                gap: 3lvw;
+                margin: 2lvw 3lvw;
+                position: relative;
+            }
+
+            & > h2 {
+                text-align: center;
+                margin-left: 28lvw;
+                color: #000;
+                margin-top: 35px;
+                font-size: 2em;
+                padding: 1rem;
+                width: 40%;
+                background: rgb(200, 200, 200, 0.8);
+
+                & > a {
+                    color: hsl(342 85% 20%);
+                    &:hover{ color: hsl(342 45% 45%); }
+                }
+
+            }
+            .cursor-trail{
+                position: absolute;
+                border-radius: 50%;
+                pointer-events: none;
+                transform: translate(-50%, -50%);
+                line-height: 1;
+                z-index: 5;
+            }
         }
     }
 }

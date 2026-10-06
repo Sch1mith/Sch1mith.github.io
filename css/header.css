@@ -1,15 +1,29 @@
 header {
-	background: var(--bg);
+    background: var(--bg-darker);
     justify-content: space-between;
-    margin-top: 3svh;
+    margin-top: -1svh;
+    margin-left: -3svh;
+    margin-right: -2svh;
+    padding: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--shadow);
+    height: 5.5rem;
 	.logo {
 		margin-left: 2svw;
 		text-align: center;
 		align-items: center;
+        gap: 2rem;
 		@media (width <= 480px) {
 			display: block;
 			padding-left: 1rem;
 		}
+
+        img {
+            background: rgb(0,0,0, 0.5);
+            border-radius: 10px;
+            padding: 3px;
+        }
+
 		a {
 			text-decoration: none;
 			color: var(--text);
@@ -27,7 +41,7 @@ header {
         margin-top: 1svh;
 		align-content: center;
 		.links{
-			gap: 1.5rem;
+			gap: 1.2rem;
 			align-items: center;
 		}
 
