@@ -49,6 +49,7 @@
 	--hover: light-dark(hsl(60 90% 100%), hsl(200 100% 67%));
 	--shadow: hsl(0 0 15%);
     --tema: hsl(215 40% 15%);
+    --tema2: hsl(215 80% 45%);
     --button: light-dark(hsl(40 40% 25%), hsl(221 15% 4%));
     --panda: url(../src/dog.cur);
     --pointer: url(../src/pointer.cur);
@@ -126,14 +127,14 @@
 .IA-total {
 	font-weight: 800;
 	font-size: 1.65rem;
-	text-shadow: var(--shadow) 0px -1px;
+    text-shadow: 0 0 1px light-dark(hsl(107 70% 30%), hsl(125 70% 60%));
 	color: light-dark(hsl(107 70% 30%), hsl(125 70% 60%));
 }
 
 .IA-parcial {
 	font-weight: 800;
 	font-size: 1.65rem;
-	text-shadow: var(--shadow) 0px -1px;
+    text-shadow: 0 0 1px light-dark(hsl(250 70% 30%), hsl(30 70% 50%));
 	color: light-dark(hsl(250 70% 30%), hsl(30 70% 50%));
 }
 
@@ -144,81 +145,13 @@
     border-bottom: 1px inset white;
 }
 
-.link_card {
-    text-decoration: none;
-    color: white;
-    display: block;
-    width: 25rem;
-    height: 40rem;
-    background: var(--highlight);
-    background-image: url('../src/bg-card.jpg');
-    box-shadow: 0px 0px 5px 0px #000;
-    border-radius: 10px 10px 10px 10px;
-    transition: transform 0.4s ease;
-    border: rgb(0, 0, 0, 0.5) solid 2px;
-
-    &:hover {
-        & > h1 {
-            z-index: 2;
-            transform: perspective(500px) rotateY(25deg) rotateY(-25deg) translateZ(50px);
-        }
-
-        & > h1::before {
-            display: block;
-        }
-    }
-
-    & > h1 {
-        transition: transform 0.5s ease;
-        display: block;
-        text-align: center;
-        width: 95%;
-        height: 20%;
-        background: var(--tema);
-        box-shadow: 2px 2px 4px var(--shadow), -2px -2px 4px var(--shadow);
-        border-radius: 10px 10px 0px 0px;
-        margin: 10px 0px 0px 6px;
-        padding-top: 15%;
-        margin-bottom: 17%;
-    }
-
-    & > h1::before {
-        transition: transform 0.4s ease;
-        content: '';
-        display: none;
-        position: absolute;
-        inset: 0;
-        height: 125%;
-        box-shadow: 0 3px 4px var(--shadow);
-        padin-top: 25%;
-        border-radius: 10px 10px 0px 0px;
-        backdrop-filter: blur(5px);
-        z-index: -1;
-    }
-
-    & > p {
-        display: flex;
-        align-items: flex-start;
-        text-align: justify;
-        padding: 10px;
-        height: 50%;
-        box-shadow: 2px 2px 4px var(--shadow), -2px -2px 4px var(--shadow);
-        color: black;
-        font-size: 1.1em;
-        margin: auto 5px auto 5px;
-        overflow-wrap: break-word;
-        word-break: break-word;
-        background: var(--bg-card);
-        border-radius: 0px 0px 10px 10px;
-    }
-}
-
 html {
     font-size: 62.5%;
     background: var(--bg);
+
     ::selection {
         background: black;
-        color: yellow;
+        color: lightpink;
     }
     body {
         font-size: 1.6rem;
