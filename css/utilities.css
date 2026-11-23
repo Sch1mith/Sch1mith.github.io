@@ -51,6 +51,7 @@
     --tema: hsl(215 40% 15%);
     --tema2: hsl(215 80% 45%);
     --button: light-dark(hsl(40 40% 25%), hsl(221 15% 4%));
+    --dark-green: hsl(150 30% 5%);
     --panda: url(../src/dog.cur);
     --pointer: url(../src/pointer.cur);
 }

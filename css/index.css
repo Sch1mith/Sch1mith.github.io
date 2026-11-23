@@ -235,7 +235,8 @@ body {
             & > h1 {
                 cursor: default;
                 font-size: 3.5em;
-                color: black;
+                color: var(--dark-green);
+                text-shadow: 1px 1px 0px var(--dark-green), -1px -1px 3px var(--dark-green), 1px -1px 3px var(--dark-green), -1px 1px 0px var(--dark-green);
                 width: 120%;
                 backdrop-filter: blur(15px);
                 text-align: center;
@@ -306,11 +307,10 @@ body {
                 z-index: 5;
             }
         }
-        .sobre_mim {
+        .container_sobre_mim {
             margin-top: 2rem;
             align-items: strech;
             outline: 1px solid #fff;
-
             & > h2 {
 
             }
